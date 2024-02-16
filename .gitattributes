@@ -1,5 +1,3 @@
-C:UsersUserDocumentsGitHubpruebasLUCHOSubmodulesMain filter=lfs diff=lfs merge=lfs -text
-img4.jpg filter=lfs diff=lfs merge=lfs -text
-images filter=lfs diff=lfs merge=lfs -text lockable
-images/2.png filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text lockable
+version https://git-lfs.github.com/spec/v1
+oid sha256:33f36c77d58bca512bca93ec165ff313f0f236f44a5f8ed0c5c762db6161acb9
+size 1012
