@@ -112,3 +112,20 @@ section {
     font-size: 1.2em;
     color: #1e90ff;
 }
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta el tamaño máximo según necesites */
+    margin: 20px auto; /* Centra el contenedor */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados para mejor estética */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
