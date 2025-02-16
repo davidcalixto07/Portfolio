@@ -1,3 +1,114 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e1623272b7919f61102c90e6e50a62652be2794bf684611dcdfa762cbecdaaca
-size 10394
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+/* Navbar */
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Landing Page */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #001f3f, #003366);
+    text-align: center;
+    position: relative;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+}
+.landing h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.landing p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #0073e6;
+}
+
+/* Secciones */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.perfil, .contacto {
+    background: #111;
+}
+.proyectos {
+    background: #222;
+}
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.proyecto {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.proyecto img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+/* Contacto */
+.contacto p {
+    font-size: 1.2em;
+    color: #1e90ff;
+}

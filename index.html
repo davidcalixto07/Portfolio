@@ -1,3 +1,82 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:868432482137c9f4c707584211920c90786b1351a65e20e34dec227930643c56
-size 6110
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="Lannding.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script>
+        let currentLanguage = "es";
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === "es" ? "en" : "es";
+            const elements = document.querySelectorAll("[data-es]");
+            elements.forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+    <style>
+        .lang-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+            float: right;
+        }
+        .lang-toggle:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="lang-toggle" onclick="toggleLanguage()">🌐 ES/EN</button>
+            <ul>
+                <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#perfil" data-es="Perfil" data-en="Profile">Perfil</a></li>
+                <li><a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <section id="inicio" class="landing">
+        <div class="overlay">
+            <h1 data-es="Bienvenido a mi Portafolio" data-en="Welcome to my Portfolio">Bienvenido a mi Portafolio</h1>
+            <p data-es="Desarrollador Web | Diseñador | Creador" data-en="Web Developer | Designer | Creator">Desarrollador Web | Diseñador | Creador</p>
+            <a href="#proyectos" class="btn" data-es="Ver Mis Proyectos" data-en="See My Projects">Ver Mis Proyectos</a>
+        </div>
+    </section>
+    
+    <section id="perfil" class="perfil">
+        <h2 data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
+        <p data-es="Soy un apasionado del desarrollo web con experiencia en tecnologías modernas..." 
+           data-en="I am passionate about web development with experience in modern technologies...">
+        Soy un apasionado del desarrollo web con experiencia en tecnologías modernas...</p>
+    </section>
+    
+    <section id="proyectos" class="proyectos">
+        <h2 data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="proyecto1.jpg" alt="Proyecto 1">
+                <h3 data-es="Proyecto 1" data-en="Project 1">Proyecto 1</h3>
+            </div>
+            <div class="proyecto">
+                <img src="proyecto2.jpg" alt="Proyecto 2">
+                <h3 data-es="Proyecto 2" data-en="Project 2">Proyecto 2</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto" class="contacto">
+        <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
+        <p>Email: contacto@miportafolio.com</p>
+    </section>
+</body>
+</html>
