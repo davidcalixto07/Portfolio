@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
+    background-color: #1D1D1D; /* Fondo oscuro elegante */
     color: #fff;
 }
 
@@ -28,7 +28,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a {
-    color: #1e90ff;
+    color: #2272FF; /* Azul neón */
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -49,13 +49,14 @@ nav ul li a:hover {
     position: relative;
 }
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     padding: 50px;
     border-radius: 10px;
 }
 .landing h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    color: #2272FF; /* Azul neón */
 }
 .landing p {
     font-size: 1.5em;
@@ -63,64 +64,138 @@ nav ul li a:hover {
 }
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background: #1e90ff;
+    padding: 12px 25px;
+    background: #2272FF;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 0 8px rgba(34, 114, 255, 0.7);
 }
 .btn:hover {
-    background: #0073e6;
+    background: #1A5ACC;
+    box-shadow: 0 0 15px rgba(34, 114, 255, 1);
 }
 
-/* Secciones */
-section {
+/* Sección de proyectos */
+.proyectos {
+    background: #1D1D1D;
     padding: 80px 20px;
     text-align: center;
 }
 
-.perfil, .contacto {
-    background: #111;
-}
-.proyectos {
-    background: #222;
-}
-.galeria {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.proyecto {
-    background: #000;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-.proyecto img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-}
-.proyecto:hover {
-    transform: scale(1.05);
+/* Título "Mis Proyectos" en azul */
+.proyectos h2 {
+    font-size: 2.5em;
+    color: #2272FF;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Contacto */
+/* Grid de proyectos: siempre 2 por fila en pantallas grandes */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Centrar el último proyecto si es impar */
+.galeria .proyecto:last-child:nth-child(odd) {
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 50%; /* Ajusta según prefieras */
+}
+
+/* Estilos de cada proyecto */
+.proyecto {
+    background: #0F0F0F; /* Negro intenso */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(34, 114, 255, 0.3); /* Borde azul neón sutil */
+    transition: all 0.3s;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto de iluminación en hover */
+.proyecto:hover {
+    transform: scale(1.05);
+    border-color: rgba(34, 114, 255, 0.8);
+    box-shadow: 0 0 15px rgba(34, 114, 255, 0.7);
+}
+
+/* Título del proyecto encima de la imagen */
+.proyecto h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #2272FF; /* Azul neón */
+}
+
+/* Imagen del proyecto */
+.proyecto img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Pequeño efecto de zoom en la imagen al pasar el mouse */
+.proyecto:hover img {
+    transform: scale(1.02);
+}
+
+/* Descripción del proyecto */
+.proyecto p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #E0E0E0;
+}
+
+/* Responsive: en móviles, solo 1 proyecto por fila */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sección Contacto */
+.contacto {
+    background: #111;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Título "Contacto" en azul */
+.contacto h2 {
+    font-size: 1.5 em;
+    color: #2272FF;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Texto de contacto */
 .contacto p {
     font-size: 1.2em;
-    color: #1e90ff;
+    color: #E0E0E0;
 }
+
+/* Video de contacto */
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Ajusta el tamaño máximo según necesites */
-    margin: 20px auto; /* Centra el contenedor */
+    max-width: 800px;
+    margin: 20px auto;
     overflow: hidden;
-    border-radius: 10px; /* Bordes redondeados para mejor estética */
+    border-radius: 10px;
 }
-
 .video-container video {
     width: 100%;
     height: auto;
@@ -128,4 +203,3 @@ section {
     object-fit: cover;
     border-radius: 10px;
 }
-
