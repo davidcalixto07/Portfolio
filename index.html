@@ -3,101 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>David Calixto | Portafolio de Desarrollo</title>
+    <meta name="description" content="Portafolio de David Calixto: desarrollo web, backend, Unity, WebGL, Flutter, Firebase, IA, integraciones y experiencias inmersivas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg">
     <link rel="stylesheet" href="Lannding.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <script>
-        let currentLanguage = "es";
-        function toggleLanguage() {
-            currentLanguage = currentLanguage === "es" ? "en" : "es";
-            const elements = document.querySelectorAll("[data-es]");
-            elements.forEach(el => {
-                el.innerText = el.getAttribute(`data-${currentLanguage}`);
-            });
-        }
-    </script>
-    <style>
-        .lang-toggle {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: color 0.3s;
-            float: right;
-        }
-        .lang-toggle:hover {
-            color: #1e90ff;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="lang-toggle" onclick="toggleLanguage()">🌐 ES/EN</button>
-            <ul>
-                <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
-                <li><a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
-                <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
-            </ul>
-            
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">DC</a>
+        <nav class="nav-links" aria-label="Navegacion principal">
+            <a href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a>
+            <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+            <a href="#sobre-mi" data-es="Sobre mi" data-en="About">Sobre mi</a>
+            <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma" data-language-toggle>ES / EN</button>
     </header>
-    
-    <section id="inicio" class="landing">
-        <div class="overlay">
-            <h1 data-es="Bienvenido a mi Portafolio" data-en="Welcome to my Portfolio">Bienvenido a mi Portafolio</h1>
-            <p data-es=" Programador de juegos con algo más de un año de experiencia en gameplay y UI, con amor por los videojuegos y la forma de llevarlos a cabo, feliz de poder aportar y aprender mucho mucho cada día, soy una persona muy proactiva a la que le gustan los restos y trabajar en equipo." 
-           data-en=" Game programmer  with a little over a year of experience in gameplay and UI, with love for video games and how to carry them out, happy to be able to contribute and learn a lot every day, I am a very proactive person who likes the remains and work in a team.">
-           Programador de juegos con algo más de un año de experiencia en gameplay y UI, con amor por los videojuegos y la forma de llevarlos a cabo, feliz de poder aportar y aprender mucho mucho cada día, soy una persona muy proactiva a la que le gustan los restos y trabajar en equipo.</p>
-            <p data-es=" Game programmer | Desarrollador Web |  UX/UI" data-en="Game programmer | Web developer |  UX/UI"> Game programmer | Desarrollador web | UX/UI</p>
-            <a href="#proyectos" class="btn" data-es="Ver Mis Proyectos" data-en="See My Projects">Ver Mis Proyectos</a>
-        </div>
-    </section>
-    
-    <section id="proyectos" class="proyectos">
-        <h2 data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
-        <div class="galeria">
-            
-            <div class="proyecto">
-                <h3 data-es="Secret Zombies" data-en="Secret Zombies">Secret Zombies</h3>
-                <div class="video-container">
-                    <video autoplay muted loop>
-                        <source src="images/SZ.mov" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-copy">
+                <div class="hero-intro">
+                    <div class="hero-avatar" aria-hidden="true">DC</div>
+                    <a class="availability" href="mailto:david_calixto@hotmail.es" data-es="Disponible para proyectos" data-en="Available for projects">Disponible para proyectos</a>
                 </div>
-                <p data-es="En este proyecto, desarrollé el bucle principal del juego y las mecánicas centrales, incluyendo la capacidad de agarrar y mover cajas. Además, implementé un sistema de distribución de códigos secretos que los jugadores deben utilizar para avanzar de nivel, agregando un elemento de estrategia e interacción al juego."
-                 data-en="In this project, I developed the game's main loop and its core mechanics, including the ability to grab and move boxes. Additionally, I implemented a secret code distribution system, which players must use to progress to the next level, adding a layer of strategy and interaction to the game."> En este proyecto, desarrollé el bucle principal del juego y las mecánicas centrales, incluyendo la capacidad de agarrar y mover cajas. Además, implementé un sistema de distribución de códigos secretos que los jugadores deben utilizar para avanzar de nivel, agregando un elemento de estrategia e interacción al juego.</p>
+                <h1>
+                    <span data-es="Hey, soy" data-en="Hey, I'm">Hey, soy</span>
+                    <strong>David Calixto</strong>
+                </h1>
+                <p class="hero-text" data-es="Desarrollador web full-stack con mas de 3 años de experiencia. Mi foco principal es crear interfaces frontend claras, backends funcionales e integraciones solidas; ademas tengo conocimientos altos en Unity/WebGL, Flutter, Firebase e IA." data-en="Full-stack web developer with over 3 years of experience. My main focus is building clear frontend interfaces, functional backends and solid integrations; I also have strong knowledge in Unity/WebGL, Flutter, Firebase and AI.">Desarrollador web full-stack con mas de 3 años de experiencia. Mi foco principal es crear interfaces frontend claras, backends funcionales e integraciones solidas; ademas tengo conocimientos altos en Unity/WebGL, Flutter, Firebase e IA.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="mailto:david_calixto@hotmail.es" data-es="Contactame" data-en="Contact me">Contactame</a>
+                    <a class="btn secondary" href="https://github.com/davidcalixto07" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="btn secondary" href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                </div>
             </div>
-            <div class="proyecto">
-                <h3 data-es="IMEX METAVERSE" data-en="IMEX METAVERSE">IMX METAVERSE</h3>
-                <img src="images/IMX.png" alt="IMEX METAVERSE">
-                <p data-es= "Contribuí al desarrollo de diversas áreas del proyecto, incluyendo el sistema de movimiento y otros aspectos generales en VR. También trabajé en comportamientos de cámara y en la gestión de la descarga de Streamer Access, asegurando una integración fluida. Todo esto fue implementado con sistemas de networking multiplataforma, garantizando una experiencia conectada y accesible en diferentes dispositivos."
-                data-en="I contributed to the development of various aspects of the project, including the movement system and general VR features. I also worked on camera behaviors and the management of Streamer Access downloads, ensuring seamless integration. All of this was implemented using multiplatform networking systems, providing a connected and accessible experience across different devices."> 
-                Contribuí al desarrollo de diversas áreas del proyecto, incluyendo el sistema de movimiento y otros aspectos generales en VR. También trabajé en comportamientos de cámara y en la gestión de la descarga de Streamer Access, asegurando una integración fluida. Todo esto fue implementado con sistemas de networking multiplataforma, garantizando una experiencia conectada y accesible en diferentes dispositivos.</p>
+        </section>
+
+        <section id="sobre-mi" class="section about-section">
+            <div>
+                <p class="eyebrow" data-es="Sobre mi" data-en="About me">Sobre mi</p>
+                <h2 data-es="Mi especialidad es desarrollo web: frontend, backend e integraciones." data-en="My specialty is web development: frontend, backend and integrations.">Mi especialidad es desarrollo web: frontend, backend e integraciones.</h2>
             </div>
-            <div class="proyecto">
-                <h3 data-es="Página WEB" data-en="WEB page">Página WEB</h3>
-                <img src="images/westweb.png" alt="Página WEB">
-                <p data-es="Desarrollé la página web de West, encargándome de todo el frontend y el diseño visual. Creé una interfaz intuitiva y atractiva, asegurando una experiencia de usuario fluida y optimizada para diferentes dispositivos."
-                data-en="I developed the West website, handling the entire frontend and visual design. I created an intuitive and visually appealing interface, ensuring a smooth user experience optimized for various devices.">
-                Desarrollé la página web de West, encargándome de todo el frontend y el diseño visual. Creé una interfaz intuitiva y atractiva, asegurando una experiencia de usuario fluida y optimizada para diferentes dispositivos. </p>
-                <a href="https://west.net.co/" class="btn" data-es="Ir al sitio WEB" data-en="Go to website">Ir al sitio WEB</a>
+            <div class="about-copy">
+                <p data-es="Trabajo principalmente construyendo productos web: pantallas responsive, paneles administrativos, flujos de usuario, APIs, autenticacion, bases de datos, migraciones e integraciones con servicios externos." data-en="I mainly work building web products: responsive screens, admin panels, user flows, APIs, authentication, databases, migrations and integrations with external services.">Trabajo principalmente construyendo productos web: pantallas responsive, paneles administrativos, flujos de usuario, APIs, autenticacion, bases de datos, migraciones e integraciones con servicios externos.</p>
+                <p data-es="Unity, WebGL, Flutter, Firebase e IA complementan mi perfil: los uso cuando el producto necesita experiencias inmersivas, apps multiplataforma, automatizacion, asistentes inteligentes o integraciones mas avanzadas." data-en="Unity, WebGL, Flutter, Firebase and AI complement my profile: I use them when the product needs immersive experiences, cross-platform apps, automation, intelligent assistants or more advanced integrations.">Unity, WebGL, Flutter, Firebase e IA complementan mi perfil: los uso cuando el producto necesita experiencias inmersivas, apps multiplataforma, automatizacion, asistentes inteligentes o integraciones mas avanzadas.</p>
             </div>
-            <div class="proyecto">
-                <h3 data-es="ESVA" data-en="ESVA">ESVA</h3>
-                <img src="images/ESVA.JPG" alt="ESVA">
-                <p data-es="Desarrollé un asistente virtual basado en ChatGPT para facilitar la resolución de casos de ingeniería de manera más sencilla. Su objetivo es reducir el tiempo de búsqueda de información en la documentación, proporcionando respuestas rápidas y precisas basadas en manuales técnicos."
-                data-en="I developed a virtual assistant powered by ChatGPT to simplify engineering cases. Its goal is to reduce the time spent searching for information in documentation by providing quick and accurate responses based on technical manuals.">
-                Desarrollé un asistente virtual basado en ChatGPT para facilitar la resolución de casos de ingeniería de manera más sencilla. Su objetivo es reducir el tiempo de búsqueda de información en la documentación, proporcionando respuestas rápidas y precisas basadas en manuales técnicos.</p>
+        </section>
+
+        <section class="section stack-groups" aria-label="Tecnologias">
+            <div class="section-heading">
+                <p class="eyebrow" data-es="Conocimientos" data-en="Skills">Conocimientos</p>
+                <h2 data-es="Stack principal y herramientas complementarias" data-en="Core stack and complementary tools">Stack principal y herramientas complementarias</h2>
             </div>
-        </div>
-    </section>
-    
-    <section id="contacto" class="contacto">
-        <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
-        <p>Email: david_calixto@hotmail.es</p>
-    </section>
+            <div class="stack-group primary-stack">
+                <p data-es="Especialidad web full-stack" data-en="Full-stack web specialty">Especialidad web full-stack</p>
+                <div class="stack">
+                    <span class="tech-item" data-label="HTML" title="HTML"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML"></span>
+                    <span class="tech-item" data-label="CSS" title="CSS"><img src="https://cdn.simpleicons.org/css/663399" alt="CSS"></span>
+                    <span class="tech-item" data-label="JavaScript" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"></span>
+                    <span class="tech-item" data-label="TypeScript" title="TypeScript"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"></span>
+                    <span class="tech-item" data-label="Vue" title="Vue"><img src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue"></span>
+                    <span class="tech-item" data-label="React" title="React"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"></span>
+                    <span class="tech-item" data-label="Vite" title="Vite"><img src="https://cdn.simpleicons.org/vite/646CFF" alt="Vite"></span>
+                    <span class="tech-item" data-label="Tailwind CSS" title="Tailwind CSS"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS"></span>
+                    <span class="tech-item" data-label="Node.js" title="Node.js"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="Node.js"></span>
+                    <span class="tech-item" data-label="Express" title="Express"><img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express"></span>
+                    <span class="tech-item text-mark" data-label="REST APIs" title="REST APIs">API</span>
+                    <span class="tech-item" data-label="Python" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"></span>
+                    <span class="tech-item" data-label="SQL" title="SQL"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="SQL"></span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <p data-es="Conocimientos complementarios" data-en="Complementary knowledge">Conocimientos complementarios</p>
+                <div class="stack">
+                    <span class="tech-item" data-label="Firebase" title="Firebase"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase"></span>
+                    <span class="tech-item" data-label="Firestore" title="Firestore"><img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firestore"></span>
+                    <span class="tech-item" data-label="Cloud Functions" title="Cloud Functions"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Cloud Functions"></span>
+                    <span class="tech-item" data-label="Azure" title="Azure"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"></span>
+                    <span class="tech-item" data-label="Unity" title="Unity"><img src="https://cdn.simpleicons.org/unity/FFFFFF" alt="Unity"></span>
+                    <span class="tech-item" data-label="WebGL" title="WebGL"><img src="https://cdn.simpleicons.org/webgl/990000" alt="WebGL"></span>
+                    <span class="tech-item" data-label="Three.js" title="Three.js"><img src="https://cdn.simpleicons.org/threedotjs/FFFFFF" alt="Three.js"></span>
+                    <span class="tech-item" data-label="Flutter" title="Flutter"><img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter"></span>
+                    <span class="tech-item invert-logo" data-label="OpenAI" title="OpenAI"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="OpenAI"></span>
+                    <span class="tech-item text-mark" data-label="SIIGO API" title="SIIGO API">SI</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <div class="section-heading">
+                <p class="eyebrow" data-es="Trabajo reciente" data-en="Recent work">Trabajo reciente</p>
+                <h2 data-es="Proyectos destacados" data-en="Featured projects">Proyectos destacados</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/west-llc.png" alt="Captura del sitio WEST Advanced Solutions">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Web corporativa | Estados Unidos" data-en="Corporate website | United States">Web corporativa | Estados Unidos</p>
+                        <h3>WEST Advanced Solutions</h3>
+                        <p data-es="Desarrollo frontend y actualizacion visual para la presencia digital de una compania de automatizacion industrial en Houston. El sitio comunica automatizacion, monitoreo de pozos, IT/OT, ciencia de datos y optimizacion de procesos." data-en="Frontend development and visual update for the digital presence of an industrial automation company in Houston. The site communicates automation, well monitoring, IT/OT, data science and process optimization services.">Desarrollo frontend y actualizacion visual para la presencia digital de una compania de automatizacion industrial en Houston. El sitio comunica automatizacion, monitoreo de pozos, IT/OT, ciencia de datos y optimizacion de procesos.</p>
+                        <div class="tags"><span>Frontend</span><span>Responsive</span><span>Industrial</span><span>UX/UI</span></div>
+                        <a class="text-link" href="https://west-llc.com/" target="_blank" rel="noreferrer" data-es="Ver sitio" data-en="View site">Ver sitio</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/westweb.png" alt="Captura del proyecto web WEST">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Web corporativa | Colombia" data-en="Corporate website | Colombia">Web corporativa | Colombia</p>
+                        <h3 data-es="Pagina WEB WEST" data-en="WEST Website">Pagina WEB WEST</h3>
+                        <p data-es="Diseno visual y desarrollo frontend de la pagina web de WEST, con una interfaz clara, responsive y enfocada en presentar servicios tecnologicos y de automatizacion." data-en="Visual design and frontend development for the WEST website, with a clear, responsive interface focused on presenting technology and automation services.">Diseno visual y desarrollo frontend de la pagina web de WEST, con una interfaz clara, responsive y enfocada en presentar servicios tecnologicos y de automatizacion.</p>
+                        <div class="tags"><span>Web</span><span>Frontend</span><span>UX/UI</span><span>Responsive</span></div>
+                        <a class="text-link" href="https://west.net.co/" target="_blank" rel="noreferrer" data-es="Ver sitio" data-en="View site">Ver sitio</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/xinergia.png" alt="Captura del sitio Xinergia">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Web | IA y consultoria" data-en="Website | AI and consulting">Web | IA y consultoria</p>
+                        <h3>Xinergia</h3>
+                        <p data-es="Trabajo web para una empresa enfocada en inteligencia artificial, ciencia de datos, transformacion digital, automatizacion, IoT y consultoria tecnologica." data-en="Web work for a company focused on artificial intelligence, data science, digital transformation, automation, IoT and technology consulting.">Trabajo web para una empresa enfocada en inteligencia artificial, ciencia de datos, transformacion digital, automatizacion, IoT y consultoria tecnologica.</p>
+                        <div class="tags"><span>Web</span><span>AI</span><span>Consulting</span><span>Content</span></div>
+                        <a class="text-link" href="https://xinerg-ia.co/" target="_blank" rel="noreferrer" data-es="Ver sitio" data-en="View site">Ver sitio</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/sisda.png" alt="Visual del sistema SISDA">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Gobierno | Sistema de archivo" data-en="Government | Archive system">Gobierno | Sistema de archivo</p>
+                        <h3>SISDA</h3>
+                        <p data-es="Desarrollo del Sistema de Archivo para alcaldia, cubriendo frontend, backend, flujos de gestion documental, organizacion de expedientes, consulta de informacion y bases para trazabilidad operativa." data-en="Development of the Archive System for a mayor's office, covering frontend, backend, document management flows, record organization, information lookup and foundations for operational traceability.">Desarrollo del Sistema de Archivo para alcaldia, cubriendo frontend, backend, flujos de gestion documental, organizacion de expedientes, consulta de informacion y bases para trazabilidad operativa.</p>
+                        <div class="tags"><span>Frontend</span><span>Backend</span><span>Documentos</span><span>Gobierno</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/digital-twins.png" alt="Visual de gemelos digitales industriales">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Industrial | Datos en tiempo real" data-en="Industrial | Real-time data">Industrial | Datos en tiempo real</p>
+                        <h3 data-es="Gemelos digitales industriales" data-en="Industrial digital twins">Gemelos digitales industriales</h3>
+                        <p data-es="Participacion en soluciones de gemelos digitales para monitoreo, prediccion y optimizacion de activos industriales, combinando modelos fisicos, analitica, visualizacion e integracion con datos operativos." data-en="Work on digital twin solutions for monitoring, prediction and optimization of industrial assets, combining physics-based models, analytics, visualization and operational data integration.">Participacion en soluciones de gemelos digitales para monitoreo, prediccion y optimizacion de activos industriales, combinando modelos fisicos, analitica, visualizacion e integracion con datos operativos.</p>
+                        <div class="tags"><span>Digital Twin</span><span>IIoT</span><span>Analytics</span><span>Optimization</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/odontoimagen.png" alt="Imagen de Odontoimagen">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Migracion | App | Integraciones" data-en="Migration | App | Integrations">Migracion | App | Integraciones</p>
+                        <h3 data-es="Odontoimagen e Integraciones Empresariales" data-en="Odontoimagen and Enterprise Integrations">Odontoimagen e Integraciones Empresariales</h3>
+                        <p data-es="Migracion y estabilizacion de datos en Firebase, scripts de backup/restore, remapeo de usuarios por UID y app Flutter conectada con Firebase, Cloud Functions y SIIGO para terceros, procedimientos y facturacion." data-en="Firebase data migration and stabilization, backup/restore scripts, user UID remapping and a Flutter app connected with Firebase, Cloud Functions and SIIGO for customers, procedures and invoicing.">Migracion y estabilizacion de datos en Firebase, scripts de backup/restore, remapeo de usuarios por UID y app Flutter conectada con Firebase, Cloud Functions y SIIGO para terceros, procedimientos y facturacion.</p>
+                        <div class="tags"><span>Flutter</span><span>Firebase</span><span>Cloud Functions</span><span>SIIGO</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/imx-background.webp" alt="Visual de IMX Metaverse">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Metaverso | Multi-tenant | WebGL" data-en="Metaverse | Multi-tenant | WebGL">Metaverso | Multi-tenant | WebGL</p>
+                        <h3>IMX Metaverse</h3>
+                        <p data-es="Desarrollo en plataforma Vue multi-tenant para exhibiciones inmersivas: integracion Unity WebGL, builds por dispositivo, temas por tenant, autenticacion, sesiones publicas/privadas, assets 3D y despliegue con Azure CDN." data-en="Development on a multi-tenant Vue platform for immersive exhibitions: Unity WebGL integration, device-specific builds, tenant theming, authentication, public/private sessions, 3D assets and Azure CDN delivery.">Desarrollo en plataforma Vue multi-tenant para exhibiciones inmersivas: integracion Unity WebGL, builds por dispositivo, temas por tenant, autenticacion, sesiones publicas/privadas, assets 3D y despliegue con Azure CDN.</p>
+                        <div class="tags"><span>Vue</span><span>Unity WebGL</span><span>Azure</span><span>Three.js</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <img src="images/ESVA.JPG" alt="ESVA asistente virtual">
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="IA | Documentacion tecnica" data-en="AI | Technical documentation">IA | Documentacion tecnica</p>
+                        <h3>ESVA</h3>
+                        <p data-es="Asistente virtual basado en ChatGPT para apoyar casos de ingenieria, reducir tiempos de busqueda en documentacion y entregar respuestas rapidas sobre manuales tecnicos." data-en="ChatGPT-powered virtual assistant for engineering cases, reducing documentation search time and delivering fast answers based on technical manuals.">Asistente virtual basado en ChatGPT para apoyar casos de ingenieria, reducir tiempos de busqueda en documentacion y entregar respuestas rapidas sobre manuales tecnicos.</p>
+                        <div class="tags"><span>OpenAI</span><span>RAG</span><span>Engineering</span><span>UX</span></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media">
+                        <video src="images/SZ.mov" autoplay muted loop playsinline controls preload="metadata">
+                            <a href="images/SZ.mov">Secret Zombies video</a>
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type" data-es="Juego | Gameplay" data-en="Game | Gameplay">Juego | Gameplay</p>
+                        <h3>Secret Zombies</h3>
+                        <p data-es="Implementacion del loop principal, mecanicas de gameplay, movimiento de cajas y sistema de codigos secretos para progresion por niveles." data-en="Implementation of the main loop, gameplay mechanics, box movement and secret-code system for level progression.">Implementacion del loop principal, mecanicas de gameplay, movimiento de cajas y sistema de codigos secretos para progresion por niveles.</p>
+                        <div class="tags"><span>Unity</span><span>Gameplay</span><span>UI</span><span>Systems</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section split-section">
+            <div>
+                <p class="eyebrow" data-es="Enfoque" data-en="Focus">Enfoque</p>
+                <h2 data-es="Base fuerte en web, con capacidad para conectar producto completo." data-en="Strong web foundation, with the ability to connect the full product.">Base fuerte en web, con capacidad para conectar producto completo.</h2>
+            </div>
+            <div class="experience-list">
+                <article>
+                    <h3 data-es="Frontend web" data-en="Web frontend">Frontend web</h3>
+                    <p data-es="Interfaces responsive, landing pages, paneles administrativos, componentes reutilizables, Vue, React, Vite, Tailwind CSS y experiencia UI/UX aplicada a producto." data-en="Responsive interfaces, landing pages, admin panels, reusable components, Vue, React, Vite, Tailwind CSS and product-focused UI/UX experience.">Interfaces responsive, landing pages, paneles administrativos, componentes reutilizables, Vue, React, Vite, Tailwind CSS y experiencia UI/UX aplicada a producto.</p>
+                </article>
+                <article>
+                    <h3 data-es="Backend e integraciones" data-en="Backend and integrations">Backend e integraciones</h3>
+                    <p data-es="APIs REST, Node.js, Express, Python, bases de datos, Firebase, Firestore, autenticacion, Cloud Functions, scripts de migracion e integraciones empresariales." data-en="REST APIs, Node.js, Express, Python, databases, Firebase, Firestore, authentication, Cloud Functions, migration scripts and enterprise integrations.">APIs REST, Node.js, Express, Python, bases de datos, Firebase, Firestore, autenticacion, Cloud Functions, scripts de migracion e integraciones empresariales.</p>
+                </article>
+                <article>
+                    <h3 data-es="Capacidades complementarias" data-en="Complementary capabilities">Capacidades complementarias</h3>
+                    <p data-es="Unity, WebGL, Three.js, Flutter, OpenAI, asistentes con IA, visualizacion 3D y automatizacion para ampliar productos web cuando el proyecto lo requiere." data-en="Unity, WebGL, Three.js, Flutter, OpenAI, AI assistants, 3D visualization and automation to extend web products when the project requires it.">Unity, WebGL, Three.js, Flutter, OpenAI, asistentes con IA, visualizacion 3D y automatizacion para ampliar productos web cuando el proyecto lo requiere.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <p class="eyebrow" data-es="Contacto" data-en="Contact">Contacto</p>
+            <h2 data-es="Hablemos de desarrollo web, backend o integraciones para tu producto." data-en="Let's talk about web development, backend or integrations for your product.">Hablemos de desarrollo web, backend o integraciones para tu producto.</h2>
+            <a class="btn primary" href="mailto:david_calixto@hotmail.es">david_calixto@hotmail.es</a>
+        </section>
+    </main>
+
+    <script>
+        const toggle = document.querySelector("[data-language-toggle]");
+        let currentLanguage = "es";
+
+        toggle.addEventListener("click", () => {
+            currentLanguage = currentLanguage === "es" ? "en" : "es";
+            document.documentElement.lang = currentLanguage;
+            document.querySelectorAll("[data-es][data-en]").forEach((element) => {
+                element.textContent = element.dataset[currentLanguage];
+            });
+        });
+    </script>
 </body>
 </html>
